@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chá de Casa Nova de J & Y — escolha um presente e faça parte do nosso primeiro lar.">
+  <meta name="theme-color" content="#faf8f3">
+  <title>Chá de Casa Nova | J & Y</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600&family=Italiana&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <span class="watercolor watercolor--one" aria-hidden="true"></span>
+      <span class="watercolor watercolor--two" aria-hidden="true"></span>
+
+      <aside class="paper-note paper-note--left" aria-hidden="true">Mais que um lar,<br>um futuro juntas ♡</aside>
+      <aside class="paper-note paper-note--right" aria-hidden="true">Sonhos<br>Móveis<br>Planos<br>Nós ♡</aside>
+
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-frame">
+          <img class="hero-photo" src="./assets/casal/j-y.jpeg" alt="J e Y celebrando a conquista do primeiro lar">
+        </div>
+        <svg class="heart-sketch heart-sketch--photo" viewBox="0 0 80 70" aria-hidden="true"><path d="M40 61C31 48 9 36 10 19 11 6 29 5 40 22 51 5 69 6 70 19 71 36 49 48 40 61Z"/></svg>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Nosso primeiro lar</p>
+        <h1 id="hero-title"><span>Chá de</span><strong>Casa Nova</strong></h1>
+        <p class="hero-lead">Uma nova etapa, um sonho real.</p>
+        <p class="hero-text">Escolha um presente e faça parte<br>do nosso primeiro lar.</p>
+        <div class="signature">J &amp; Y <span aria-hidden="true">♡</span></div>
+        <a class="scroll-gifts" href="#lista-presentes">Ver lista de presentes <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <aside class="paper-note paper-note--bottom" aria-hidden="true">Pequenos gestos,<br>grandes histórias ♡</aside>
+    </section>
+
+    <section class="presentes-section" id="lista-presentes" aria-labelledby="presentes-title">
+      <img class="decor decor--branch" src="./assets/decor/branch.svg" alt="" aria-hidden="true">
+      <img class="decor decor--ribbon" src="./assets/decor/ribbon.svg" alt="" aria-hidden="true">
+      <aside class="paper-note paper-note--gifts" aria-hidden="true">Aqui também<br>mora muito amor ♡</aside>
+      <div class="section-heading">
+        <span class="section-kicker">com carinho, para o novo começo</span>
+        <h2 id="presentes-title">Lista de Presentes</h2>
+        <div class="heading-flourish" aria-hidden="true"><span></span>♡<span></span></div>
+        <p>Clique em Exemplo para ver uma sugestão ou em Presentear para reservar o item.</p>
+      </div>
+      <div id="reservation-status" class="connection-message" role="status" aria-live="polite">Preparando a lista de presentes...</div>
+      <div id="presentes-grid" class="presentes-grid" aria-live="polite"></div>
+      <aside class="closing-note" aria-hidden="true">Lar é onde<br>a gente escolhe<br>ficar ♡</aside>
+    </section>
+  </main>
+
+  <dialog id="reservation-dialog" class="reservation-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <form id="reservation-form" method="dialog" novalidate>
+      <button class="dialog-close" type="button" aria-label="Fechar">×</button>
+      <div class="dialog-icon" aria-hidden="true">♡</div>
+      <h2 id="dialog-title">Presentear</h2>
+      <p id="dialog-description">Que carinho ter você fazendo parte desse novo começo. 💙</p>
+      <label for="guest-name">Seu nome</label>
+      <input id="guest-name" name="nome" type="text" minlength="2" maxlength="80" autocomplete="name" placeholder="Digite seu nome" required>
+      <p id="name-error" class="field-error" aria-live="polite"></p>
+      <div class="dialog-actions">
+        <button class="button button--secondary" type="button" data-action="cancel">Cancelar</button>
+        <button class="button button--primary" type="submit">Confirmar presente</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

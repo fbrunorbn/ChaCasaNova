@@ -1,0 +1,24 @@
+:root {
+  --paper: #faf8f3;
+  --paper-light: #fffdf8;
+  --beige-100: #eadccb;
+  --beige-200: #e4d1ba;
+  --beige-300: #d9c1a5;
+  --beige-400: #c9a98a;
+  --blue-100: #d9ebf7;
+  --blue-200: #b9d7ee;
+  --blue-300: #a8cdea;
+  --blue-400: #89bce0;
+  --blue-500: #74add4;
+  --text: #584337;
+  --ink: #292522;
+  --muted: #8c7768;
+  --white: #fff;
+  --radius-sm: 0.75rem;
+  --radius-md: 1.4rem;
+  --shadow-paper: 0 18px 55px rgba(104, 77, 57, 0.11);
+  --font-serif: "Italiana", Georgia, serif;
+  --font-script: "Parisienne", "Brush Script MT", cursive;
+  --font-hand: "Caveat", "Segoe Print", cursive;
+  --font-body: "DM Sans", Arial, sans-serif;
+}

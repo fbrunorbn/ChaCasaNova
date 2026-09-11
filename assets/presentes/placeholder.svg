@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-labelledby="title desc">
+  <title id="title">Imagem em breve</title><desc id="desc">Ilustração delicada de uma casa e um presente</desc>
+  <rect width="420" height="420" rx="210" fill="#f2e8dc"/>
+  <path d="M120 204 210 126l90 78v104H120Z" fill="none" stroke="#89bce0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M177 308v-65h66v65M153 176v-41h37v10" fill="none" stroke="#89bce0" stroke-width="9" stroke-linecap="round"/>
+  <path d="M189 214h42v39h-42zM210 214v39M189 233h42" fill="none" stroke="#c9a98a" stroke-width="6"/>
+  <path d="M210 212c-15-18-38-7-21 8M210 212c15-18 38-7 21 8" fill="none" stroke="#c9a98a" stroke-width="6" stroke-linecap="round"/>
+  <text x="210" y="354" text-anchor="middle" fill="#806958" font-family="Georgia,serif" font-size="21">imagem em breve</text>
+</svg>

@@ -1,0 +1,37 @@
+@media (max-width: 1120px) {
+  .paper-note--left, .paper-note--right { opacity: .72; transform: scale(.85) rotate(-6deg); }
+  .paper-note--right { transform: scale(.85) rotate(6deg); }
+  .presentes-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .paper-note--gifts { display: none; }
+}
+@media (max-width: 860px) {
+  .hero { min-height: auto; grid-template-columns: 1fr; gap: 2.7rem; padding: 5rem 7vw 6rem; text-align: center; }
+  .hero-photo-wrap { width: min(74vw, 550px); }
+  .hero-copy { justify-self: center; }
+  .hero h1 strong { white-space: normal; transform: none; }
+  .hero-text br { display: none; }
+  .scroll-gifts { justify-content: center; }
+  .paper-note--left { top: 2rem; left: -2rem; }
+  .paper-note--right { top: 36%; right: -2rem; }
+  .paper-note--bottom { display: none; }
+  .presentes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .decor--branch { width: 11rem; opacity: .48; }
+}
+@media (max-width: 540px) {
+  .hero { padding: 4.5rem 1.25rem 4.6rem; }
+  .hero-photo-wrap { width: min(88vw, 430px); }
+  .hero h1 span { font-size: clamp(3rem, 14vw, 4.1rem); }
+  .hero h1 strong { font-size: clamp(4.5rem, 21vw, 6.4rem); line-height: .92; }
+  .paper-note { display: none; }
+  .heart-sketch--photo { width: 3.4rem; right: -.6rem; }
+  .presentes-section { padding: 4.7rem 1rem 5rem; }
+  .section-heading { margin-bottom: 3rem; }
+  .presentes-grid { grid-template-columns: 1fr; max-width: 21rem; gap: 1.4rem; }
+  .presente-card { min-height: 25rem; }
+  .reservation-dialog form { padding: 2.4rem 1.25rem 1.4rem; }
+  .dialog-actions { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
