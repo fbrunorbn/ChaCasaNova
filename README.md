@@ -37,7 +37,7 @@ Todos os caminhos públicos são relativos (`./assets`, `./css` e `./js`), entã
 
 ## Trocar imagens e links
 
-Para incluir uma foto de produto, coloque um arquivo WebP em `assets/presentes/` usando exatamente o nome declarado em `js/presentes.js`, por exemplo `liquidificador.webp`. Enquanto o arquivo não existir, o site mostra `placeholder.svg`; nenhuma alteração de código é necessária.
+As 36 imagens dos presentes estão em formato PNG com fundo transparente em `assets/presentes/`. Para substituir uma delas, mantenha exatamente o nome declarado em `js/presentes.js`, por exemplo `liquidificador.png`. Enquanto o arquivo não existir, o site mostra `placeholder.svg`; nenhuma alteração de código é necessária.
 
 Para trocar um link ou editar a lista, altere somente `js/presentes.js`. Use `exemploUrl: null` quando ainda não houver sugestão; o botão aparecerá como **Em breve**.
 
