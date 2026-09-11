@@ -77,8 +77,8 @@ body::before {
 .card-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; width: 100%; }
 .button { min-height: 2.75rem; display: inline-flex; align-items: center; justify-content: center; border: 1px solid transparent; border-radius: 999px; padding: .7rem .8rem; cursor: pointer; text-decoration: none; font-weight: 600; font-size: .88rem; transition: background-color .2s ease, transform .2s ease; }
 .button:hover:not(:disabled) { transform: translateY(-1px); }
-.button--primary { background: var(--blue-500); color: var(--white); }
-.button--primary:hover:not(:disabled) { background: #639ec7; }
+.button--primary { background: var(--blue-button); color: var(--white); }
+.button--primary:hover:not(:disabled) { background: #417da7; }
 .button--secondary { border-color: var(--beige-300); background: var(--beige-100); color: var(--text); }
 .button:disabled { cursor: not-allowed; opacity: .7; }
 .button--reserved { border-color: var(--beige-300); background: #d7c4af; color: #6f5949; }
