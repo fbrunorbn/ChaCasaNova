@@ -37,11 +37,11 @@ Todos os caminhos públicos são relativos (`./assets`, `./css` e `./js`), entã
 
 ## Trocar imagens e links
 
-As 36 imagens dos presentes estão em formato PNG com fundo transparente em `assets/presentes/`. Para substituir uma delas, mantenha exatamente o nome declarado em `js/presentes.js`, por exemplo `liquidificador.png`. Enquanto o arquivo não existir, o site mostra `placeholder.svg`; nenhuma alteração de código é necessária.
+As 36 imagens otimizadas dos presentes estão em formato WebP com fundo transparente em `assets/presentes/`. Para substituir uma delas, mantenha exatamente o nome declarado em `js/presentes.js`, por exemplo `liquidificador.webp`. Enquanto o arquivo não existir, o site mostra `placeholder.svg`; nenhuma alteração de código é necessária.
 
 Para trocar um link ou editar a lista, altere somente `js/presentes.js`. Use `exemploUrl: null` quando ainda não houver sugestão; o botão aparecerá como **Em breve**.
 
-A fotografia principal está em `assets/casal/j-y.jpeg`.
+A fotografia principal otimizada está em `assets/casal/j-y.webp`; o JPEG original permanece como arquivo-fonte.
 
 ## Como funciona o Firestore
 

@@ -31,6 +31,108 @@
   .reservation-dialog form { padding: 2.4rem 1.25rem 1.4rem; }
   .dialog-actions { grid-template-columns: 1fr; }
 }
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  body { position: relative; }
+  body::before { opacity: .18; mix-blend-mode: normal; }
+  main,
+  section,
+  .hero,
+  .presentes-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 20px;
+    padding-left: 20px;
+    overflow-x: hidden;
+  }
+  .hero-photo-wrap {
+    width: min(92vw, 520px);
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .hero-photo-wrap::before { inset: -.5rem .35rem .35rem .1rem; }
+  .hero-photo-wrap::after { inset: .35rem .1rem -.5rem .35rem; }
+  .hero-photo-frame { width: 100%; min-width: 0; }
+  .hero img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .hero-copy {
+    width: 100%;
+    max-width: 560px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+  .hero h1,
+  .hero h1 span,
+  .hero h1 strong {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .heart-sketch--photo { right: 0; }
+  .watercolor { max-width: 100%; filter: none; }
+  .watercolor--one { left: 0; width: 100%; transform: none; }
+  .watercolor--two { right: 0; width: min(20rem, 85%); }
+  .paper-note { display: none; }
+  .presentes-section {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+    overflow-x: hidden;
+  }
+  .presentes-section::before { inset: 3rem 0 auto; width: 100%; }
+  .presentes-grid {
+    width: 100%;
+    min-width: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .presente-card {
+    width: 100%;
+    max-width: 360px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .decor,
+  .closing-note { max-width: 100%; }
+  .decor--branch { right: 0; }
+  .decor--ribbon { left: .5rem; transform: none; }
+  .closing-note { width: max-content; }
+  .toast-region { right: 1rem; left: 1rem; width: auto; max-width: 24rem; margin-left: auto; }
+  img,
+  picture,
+  svg,
+  video,
+  button,
+  a { max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .presentes-grid { grid-template-columns: 1fr; max-width: 360px; gap: 24px; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }

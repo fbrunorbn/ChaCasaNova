@@ -1,4 +1,25 @@
 const placeholder = "./assets/presentes/placeholder.svg";
+const mobileImages = window.matchMedia("(max-width: 768px)");
+let deferredImageObserver = null;
+
+function prepareDeferredImage(image, source) {
+  if (!mobileImages.matches || !("IntersectionObserver" in window)) {
+    image.src = source;
+    return false;
+  }
+
+  image.dataset.src = source;
+  deferredImageObserver ??= new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const deferredImage = entry.target;
+      deferredImage.src = deferredImage.dataset.src;
+      delete deferredImage.dataset.src;
+      observer.unobserve(deferredImage);
+    });
+  }, { rootMargin: "600px 0px" });
+  return true;
+}
 
 export const elements = {
   grid: document.querySelector("#presentes-grid"),
@@ -23,7 +44,9 @@ function createExampleButton(presente) {
 }
 
 export function renderPresentes(presentes, state, onGift) {
+  deferredImageObserver?.disconnect();
   const fragment = document.createDocumentFragment();
+  const imagesToObserve = [];
   presentes.forEach((presente, index) => {
     const reservado = state.reservas.has(presente.id);
     const card = document.createElement("article");
@@ -35,10 +58,14 @@ export function renderPresentes(presentes, state, onGift) {
     imageWrap.className = "presente-image-wrap";
     const image = document.createElement("img");
     image.className = "presente-image";
-    image.src = presente.imagem;
     image.alt = presente.nome;
     image.loading = "lazy";
+    image.decoding = "async";
+    image.width = 500;
+    image.height = 500;
+    if (mobileImages.matches) image.fetchPriority = "low";
     image.addEventListener("error", () => { if (!image.src.endsWith("placeholder.svg")) image.src = placeholder; }, { once: true });
+    if (prepareDeferredImage(image, presente.imagem)) imagesToObserve.push(image);
     imageWrap.append(image);
 
     const title = document.createElement("h3");
@@ -71,6 +98,7 @@ export function renderPresentes(presentes, state, onGift) {
     fragment.append(card);
   });
   elements.grid.replaceChildren(fragment);
+  imagesToObserve.forEach((image) => deferredImageObserver.observe(image));
 }
 
 export function openReservationDialog(presente) {
