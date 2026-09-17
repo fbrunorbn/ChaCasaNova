@@ -1,6 +1,6 @@
-import { presentes } from "./presentes.js";
-import { acompanharReservas, reservarPresente } from "./firebase-service.js";
-import { closeReservationDialog, elements, openReservationDialog, renderPresentes, showToast } from "./ui.js";
+import { presentes } from "./presentes.js?v=2026.09.16.1";
+import { acompanharReservas, reservarPresente } from "./firebase-service.js?v=2026.09.16.1";
+import { closeReservationDialog, elements, openReservationDialog, renderPresentes, showToast } from "./ui.js?v=2026.09.16.1";
 
 const reservas = new Map();
 const state = { reservas, isLoadingReservations: true, hasConnectionError: false, isSubmitting: false };

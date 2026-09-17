@@ -1,6 +1,14 @@
+import { APP_VERSION } from "./version.js?v=2026.09.16.1";
+
 const placeholder = "./assets/presentes/placeholder.svg";
 const mobileImages = window.matchMedia("(max-width: 768px)");
 let deferredImageObserver = null;
+
+function withVersion(path) {
+  if (!path) return path;
+  const separator = path.includes("?") ? "&" : "?";
+  return `${path}${separator}v=${encodeURIComponent(APP_VERSION)}`;
+}
 
 function prepareDeferredImage(image, source) {
   if (!mobileImages.matches || !("IntersectionObserver" in window)) {
@@ -64,8 +72,11 @@ export function renderPresentes(presentes, state, onGift) {
     image.width = 500;
     image.height = 500;
     if (mobileImages.matches) image.fetchPriority = "low";
-    image.addEventListener("error", () => { if (!image.src.endsWith("placeholder.svg")) image.src = placeholder; }, { once: true });
-    if (prepareDeferredImage(image, presente.imagem)) imagesToObserve.push(image);
+    image.onerror = () => {
+      image.onerror = null;
+      image.src = withVersion(placeholder);
+    };
+    if (prepareDeferredImage(image, withVersion(presente.imagem))) imagesToObserve.push(image);
     imageWrap.append(image);
 
     const title = document.createElement("h3");

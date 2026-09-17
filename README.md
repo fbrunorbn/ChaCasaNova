@@ -35,6 +35,18 @@ Depois acesse `http://localhost:5500`. A extensão Live Server do VS Code també
 
 Todos os caminhos públicos são relativos (`./assets`, `./css` e `./js`), então o site funciona em endereços como `usuario.github.io/cha-casa-nova/`.
 
+## Atualizando o site sem cache antigo
+
+Sempre que fizer um novo deploy com alterações visuais, CSS, JavaScript ou imagens, execute:
+
+```bash
+node scripts/update-version.mjs 2026.09.16.2
+```
+
+Use uma versão nova a cada publicação. O script atualiza automaticamente `js/version.js`, a cópia em `dist`, os parâmetros `?v=` do `index.html` e os imports locais versionados. Depois, faça commit e push normalmente.
+
+Assim, arquivos como `styles.css?v=2026.09.16.2`, módulos JavaScript e imagens locais recebem uma URL nova, evitando que Chrome e outros navegadores reutilizem a versão antiga. URLs externas de lojas e do Firebase CDN não são alteradas.
+
 ## Trocar imagens e links
 
 As 53 imagens otimizadas dos presentes estão em formato WebP, com fundo transparente ou claro conforme o produto, em `assets/presentes/`. Para substituir uma delas, mantenha exatamente o nome declarado em `js/presentes.js`, por exemplo `liquidificador.webp`. Enquanto o arquivo não existir, o site mostra `placeholder.svg`; nenhuma alteração de código é necessária.
