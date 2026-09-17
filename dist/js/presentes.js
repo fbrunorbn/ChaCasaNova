@@ -24,6 +24,8 @@ export const presentes = [
   { id: "porta-detergente", nome: "Kit Porta Detergente", imagem: "./assets/presentes/porta-detergente.webp", exemploUrl: "https://m.magazineluiza.com.br/dispenser-porta-detergente-e-esponja-flat-500ml-cor-preto-nitron/p/kgkd29ce99/ud/ordu/?partner_id=64853&utm_source=pdp_desk&utm_medium=share&seller_id=lojamixmagazine" },
   { id: "cuscuzeira", nome: "Cuscuzeira", imagem: "./assets/presentes/cuscuzeira.webp", exemploUrl: null },
   { id: "panela-pressao", nome: "Panela de Pressão", imagem: "./assets/presentes/panela-pressao.webp", exemploUrl: "https://www.mercadolivre.com.br/p/MLB68455038?matt_tool=38524122&pdp_filters=item_id:MLB7608344814&ua=Z5pXQR39ZlRtSst-apOU6ZxBTpaP2ao_Gjn0gsrTdeZAnzk#origin=share&sid=share&wid=MLB7608344814&action=copy" },
+  { id: "panela-cafe", nome: "Panela para café", imagem: "./assets/presentes/panela-cafe.webp", exemploUrl: null },
+  { id: "leiteira", nome: "Leiteira", imagem: "./assets/presentes/leiteira.webp", exemploUrl: null },
   { id: "escorredor-macarrao", nome: "Escorredor de Macarrão", imagem: "./assets/presentes/escorredor-macarrao.webp", exemploUrl: "https://www.mercadolivre.com.br/up/MLBU4283900250?matt_tool=38524122&pdp_filters=item_id:MLB7141927726&ua=9AVvNH01m3675_xtIrNIuRBuFs_ICiwKnHfdNp_dBXjR8A0#origin=share&sid=share&wid=MLB7141927726&action=copy" },
   { id: "peneiras", nome: "Peneiras", imagem: "./assets/presentes/peneiras.webp", exemploUrl: null },
   { id: "organizador-talheres", nome: "Organizador de Talheres", imagem: "./assets/presentes/organizador-talheres.webp", exemploUrl: "https://produto.mercadolivre.com.br/MLB-7270094040?matt_tool=38524122&ua=tNhrF4VKVKJyQDavPzGsGwX9kzImYpTZw1yyM5ketyFNTIg#origin=share&sid=share&action=copy" },

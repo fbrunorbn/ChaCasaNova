@@ -1,6 +1,7 @@
-import { presentes } from "./presentes.js?v=2026.09.17.1";
-import { acompanharReservas, reservarPresente } from "./firebase-service.js?v=2026.09.17.1";
-import { closeReservationDialog, elements, openReservationDialog, renderPresentes, showToast } from "./ui.js?v=2026.09.17.1";
+import { presentes } from "./presentes.js?v=2026.09.17.2";
+import { acompanharReservas, reservarPresente } from "./firebase-service.js?v=2026.09.17.2";
+import { closeReservationDialog, elements, openReservationDialog, renderPresentes, showToast } from "./ui.js?v=2026.09.17.2";
+import { initConfirmationSection } from "./confirmation-ui.js?v=2026.09.17.2";
 
 const reservas = new Map();
 const state = { reservas, isLoadingReservations: true, hasConnectionError: false, isSubmitting: false };
@@ -111,6 +112,7 @@ function registerWebMcpTool() {
 
 refreshCards();
 registerWebMcpTool();
+initConfirmationSection();
 
 const pixCode = document.querySelector("#pix-code");
 const copyPixButton = document.querySelector("#copy-pix");

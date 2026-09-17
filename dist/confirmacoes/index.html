@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#faf8f3">
+  <title>Área de confirmações | Chá de Casa Nova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600&family=Italiana&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css?v=2026.09.17.2">
+  <link rel="stylesheet" href="../css/variables.css?v=2026.09.17.2">
+  <link rel="stylesheet" href="../css/confirmacoes.css?v=2026.09.17.2">
+</head>
+<body>
+  <main class="admin-page">
+    <span class="admin-wash admin-wash--one" aria-hidden="true"></span>
+    <span class="admin-wash admin-wash--two" aria-hidden="true"></span>
+    <section class="admin-shell" aria-labelledby="admin-page-title">
+      <div id="admin-login-panel" class="admin-login-panel">
+        <p class="admin-kicker">Chá de Casa Nova</p>
+        <h1 id="admin-page-title">Área de confirmações</h1>
+        <p class="admin-intro">Entre para acompanhar quem vai celebrar esse momento com a gente.</p>
+        <form id="admin-login-form" class="admin-login-form" novalidate>
+          <label for="admin-email">E-mail</label>
+          <input id="admin-email" name="email" type="email" autocomplete="email" required>
+          <label for="admin-password">Senha</label>
+          <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+          <p id="admin-login-error" class="admin-feedback" role="alert" aria-live="assertive"></p>
+          <button id="admin-login-submit" class="admin-button" type="submit">Entrar</button>
+        </form>
+      </div>
+
+      <section id="admin-dashboard" class="admin-dashboard" aria-labelledby="admin-dashboard-title" hidden>
+        <header class="admin-header">
+          <div>
+            <p class="admin-kicker">Chá de Casa Nova</p>
+            <h1 id="admin-dashboard-title">Confirmações &#128153;</h1>
+          </div>
+          <button id="admin-logout" class="admin-logout" type="button">Sair</button>
+        </header>
+
+        <div class="admin-total" aria-live="polite" aria-atomic="true">
+          <strong id="admin-total-people">0</strong>
+          <span>pessoas confirmadas</span>
+          <p id="admin-total-groups">0 confirmações recebidas</p>
+        </div>
+        <p id="admin-status" class="admin-status" role="status" aria-live="polite">Carregando confirmações...</p>
+        <p id="admin-permission-error" class="admin-permission-error" role="alert" hidden>Este usuário não possui autorização para visualizar as confirmações.</p>
+        <div id="admin-confirmation-list" class="admin-confirmation-list" aria-live="polite"></div>
+      </section>
+    </section>
+  </main>
+  <script type="module" src="../js/confirmacoes-admin.js?v=2026.09.17.2"></script>
+</body>
+</html>

@@ -15,6 +15,7 @@
   .paper-note--right { top: 36%; right: -2rem; }
   .paper-note--bottom { display: none; }
   .pix-card { grid-template-columns: 1fr; gap: 2.2rem; max-width: 38rem; }
+  .confirmation-card { max-width: 38rem; }
   .pix-details { text-align: center; }
   .pix-copy-button { margin-right: auto; margin-left: auto; }
   .pix-code { text-align: left; }
@@ -30,6 +31,12 @@
   .heart-sketch--photo { width: 3.4rem; right: -.6rem; }
   .presentes-section { padding: 4.7rem 1rem 5rem; }
   .pix-section { padding: 4.7rem 1rem 5.5rem; }
+  .confirmation-section { padding: 4.7rem 1rem 5.1rem; }
+  .confirmation-heading { margin-bottom: 2.4rem; }
+  .confirmation-heading h2 { max-width: 22rem; margin-right: auto; margin-left: auto; font-size: clamp(2rem, 8.8vw, 3.1rem); line-height: 1.08; overflow-wrap: break-word; }
+  .confirmation-heading p { max-width: 21rem; margin-right: auto; margin-left: auto; }
+  .confirmation-card { padding: 1.1rem; border-radius: 1.6rem; }
+  .confirmation-submit { width: 100%; }
   .pix-card { gap: 1.7rem; padding: 1.1rem; border-radius: 1.6rem; }
   .pix-qr-frame { width: min(72vw, 16rem); }
   .pix-heading { margin-bottom: 2.4rem; }

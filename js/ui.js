@@ -1,4 +1,4 @@
-import { APP_VERSION } from "./version.js?v=2026.09.17.1";
+import { APP_VERSION } from "./version.js?v=2026.09.17.2";
 
 const placeholder = "./assets/presentes/placeholder.svg";
 const mobileImages = window.matchMedia("(max-width: 768px)");

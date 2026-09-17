@@ -13,10 +13,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600&family=Italiana&family=Parisienne&display=swap" rel="stylesheet">
   <!-- Atualizar esta versão junto com js/version.js -->
-  <link rel="stylesheet" href="./css/reset.css?v=2026.09.17.1">
-  <link rel="stylesheet" href="./css/variables.css?v=2026.09.17.1">
-  <link rel="stylesheet" href="./css/styles.css?v=2026.09.17.1">
-  <link rel="stylesheet" href="./css/responsive.css?v=2026.09.17.1">
+  <link rel="stylesheet" href="./css/reset.css?v=2026.09.17.2">
+  <link rel="stylesheet" href="./css/variables.css?v=2026.09.17.2">
+  <link rel="stylesheet" href="./css/styles.css?v=2026.09.17.2">
+  <link rel="stylesheet" href="./css/responsive.css?v=2026.09.17.2">
 </head>
 <body>
   <main>
@@ -29,7 +29,7 @@
 
       <div class="hero-photo-wrap">
         <div class="hero-photo-frame">
-          <img class="hero-photo" src="./assets/casal/j-y.webp?v=2026.09.17.1" alt="J e Y celebrando a conquista do primeiro lar" loading="eager" fetchpriority="high" decoding="async" width="900" height="900">
+          <img class="hero-photo" src="./assets/casal/j-y.webp?v=2026.09.17.2" alt="J e Y celebrando a conquista do primeiro lar" loading="eager" fetchpriority="high" decoding="async" width="900" height="900">
         </div>
         <svg class="heart-sketch heart-sketch--photo" viewBox="0 0 80 70" aria-hidden="true"><path d="M40 61C31 48 9 36 10 19 11 6 29 5 40 22 51 5 69 6 70 19 71 36 49 48 40 61Z"/></svg>
       </div>
@@ -46,6 +46,46 @@
       <aside class="paper-note paper-note--bottom" aria-hidden="true">Pequenos gestos,<br>grandes histórias ♡</aside>
     </section>
 
+    <section class="confirmation-section" id="confirmacao" aria-labelledby="confirmation-title">
+      <span class="confirmation-wash confirmation-wash--one" aria-hidden="true"></span>
+      <span class="confirmation-wash confirmation-wash--two" aria-hidden="true"></span>
+      <div class="section-heading confirmation-heading">
+        <span class="section-kicker">um carinho para nos ajudar a preparar tudo</span>
+        <h2 id="confirmation-title">Voc&ecirc; vem celebrar com a gente?</h2>
+        <div class="heading-flourish" aria-hidden="true"><span></span>&#9825;<span></span></div>
+        <p>Confirme seu nome e de quem vai com voc&ecirc;. Assim conseguimos preparar tudo com carinho. &#128153;</p>
+      </div>
+
+      <div class="confirmation-card">
+        <form id="confirmation-form" novalidate>
+          <div class="confirmation-field">
+            <label for="confirmation-name">Seu nome</label>
+            <input id="confirmation-name" name="nome" type="text" minlength="2" maxlength="80" autocomplete="name" placeholder="Digite seu nome" required>
+            <p id="confirmation-name-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="confirmation-companions">
+            <div class="confirmation-label-row">
+              <label for="companion-fields">Acompanhantes</label>
+              <span>at&eacute; 14</span>
+            </div>
+            <div id="companion-fields" class="companion-fields"></div>
+            <button id="add-companion" class="button button--secondary add-companion-button" type="button">+ Adicionar acompanhante</button>
+          </div>
+
+          <p id="confirmation-count" class="confirmation-count" aria-live="polite">0 pessoas</p>
+          <p id="confirmation-feedback" class="confirmation-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+          <button id="confirm-presence" class="button button--primary confirmation-submit" type="submit">Confirmar presen&ccedil;a</button>
+        </form>
+
+        <div id="confirmation-success" class="confirmation-success" role="status" aria-live="polite" aria-atomic="true" hidden>
+          <div class="confirmation-success-icon" aria-hidden="true">&#9825;</div>
+          <h3 id="confirmation-success-title">Presen&ccedil;a j&aacute; confirmada &#128153;</h3>
+          <p id="confirmation-success-text">Obrigada por fazer parte desse momento com a gente.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="pix-section" id="pix" aria-labelledby="pix-title">
       <div class="pix-wash pix-wash--one" aria-hidden="true"></div>
       <div class="pix-wash pix-wash--two" aria-hidden="true"></div>
@@ -58,7 +98,7 @@
       <div class="pix-card">
         <div class="pix-qr-panel">
           <div class="pix-qr-frame">
-            <img src="./assets/pix/qr-pix.png?v=2026.09.17.1" alt="QR Code Pix para presentear o casal" width="280" height="280" loading="eager" decoding="async">
+            <img src="./assets/pix/qr-pix.png?v=2026.09.17.2" alt="QR Code Pix para presentear o casal" width="280" height="280" loading="eager" decoding="async">
           </div>
         </div>
 
@@ -72,8 +112,8 @@
     </section>
 
     <section class="presentes-section" id="lista-presentes" aria-labelledby="presentes-title">
-      <img class="decor decor--branch" src="./assets/decor/branch.svg?v=2026.09.17.1" alt="" aria-hidden="true">
-      <img class="decor decor--ribbon" src="./assets/decor/ribbon.svg?v=2026.09.17.1" alt="" aria-hidden="true">
+      <img class="decor decor--branch" src="./assets/decor/branch.svg?v=2026.09.17.2" alt="" aria-hidden="true">
+      <img class="decor decor--ribbon" src="./assets/decor/ribbon.svg?v=2026.09.17.2" alt="" aria-hidden="true">
       <aside class="paper-note paper-note--gifts" aria-hidden="true">Aqui também<br>mora muito amor ♡</aside>
       <div class="section-heading">
         <span class="section-kicker">com carinho, para o novo começo</span>
@@ -104,6 +144,6 @@
   </dialog>
 
   <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
-  <script type="module" src="./js/app.js?v=2026.09.17.1"></script>
+  <script type="module" src="./js/app.js?v=2026.09.17.2"></script>
 </body>
 </html>

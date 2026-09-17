@@ -19,6 +19,14 @@ const versionedFiles = [
   "dist/js/firebase-service.js",
   "js/ui.js",
   "dist/js/ui.js",
+  "js/confirmation-service.js",
+  "dist/js/confirmation-service.js",
+  "js/confirmation-ui.js",
+  "dist/js/confirmation-ui.js",
+  "js/confirmacoes-admin.js",
+  "dist/js/confirmacoes-admin.js",
+  "confirmacoes/index.html",
+  "dist/confirmacoes/index.html",
 ];
 const localVersionedUrl = /(\.{1,2}\/[^"'`\s?]+\.(?:css|js|webp|svg|png))\?v=[^"'`\s&]+/g;
 
