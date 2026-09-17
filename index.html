@@ -13,10 +13,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600&family=Italiana&family=Parisienne&display=swap" rel="stylesheet">
   <!-- Atualizar esta versão junto com js/version.js -->
-  <link rel="stylesheet" href="./css/reset.css?v=2026.09.16.1">
-  <link rel="stylesheet" href="./css/variables.css?v=2026.09.16.1">
-  <link rel="stylesheet" href="./css/styles.css?v=2026.09.16.1">
-  <link rel="stylesheet" href="./css/responsive.css?v=2026.09.16.1">
+  <link rel="stylesheet" href="./css/reset.css?v=2026.09.17.1">
+  <link rel="stylesheet" href="./css/variables.css?v=2026.09.17.1">
+  <link rel="stylesheet" href="./css/styles.css?v=2026.09.17.1">
+  <link rel="stylesheet" href="./css/responsive.css?v=2026.09.17.1">
 </head>
 <body>
   <main>
@@ -29,7 +29,7 @@
 
       <div class="hero-photo-wrap">
         <div class="hero-photo-frame">
-          <img class="hero-photo" src="./assets/casal/j-y.webp?v=2026.09.16.1" alt="J e Y celebrando a conquista do primeiro lar" loading="eager" fetchpriority="high" decoding="async" width="900" height="900">
+          <img class="hero-photo" src="./assets/casal/j-y.webp?v=2026.09.17.1" alt="J e Y celebrando a conquista do primeiro lar" loading="eager" fetchpriority="high" decoding="async" width="900" height="900">
         </div>
         <svg class="heart-sketch heart-sketch--photo" viewBox="0 0 80 70" aria-hidden="true"><path d="M40 61C31 48 9 36 10 19 11 6 29 5 40 22 51 5 69 6 70 19 71 36 49 48 40 61Z"/></svg>
       </div>
@@ -46,9 +46,34 @@
       <aside class="paper-note paper-note--bottom" aria-hidden="true">Pequenos gestos,<br>grandes histórias ♡</aside>
     </section>
 
+    <section class="pix-section" id="pix" aria-labelledby="pix-title">
+      <div class="pix-wash pix-wash--one" aria-hidden="true"></div>
+      <div class="pix-wash pix-wash--two" aria-hidden="true"></div>
+      <div class="section-heading pix-heading">
+        <h2 id="pix-title">Prefere nos presentear via Pix?</h2>
+        <div class="heading-flourish" aria-hidden="true"><span></span>&#9825;<span></span></div>
+        <p>Se preferir, voc&ecirc; tamb&eacute;m pode nos presentear via Pix. Toda contribui&ccedil;&atilde;o ser&aacute; recebida com muito carinho e far&aacute; parte do nosso novo come&ccedil;o.</p>
+      </div>
+
+      <div class="pix-card">
+        <div class="pix-qr-panel">
+          <div class="pix-qr-frame">
+            <img src="./assets/pix/qr-pix.png?v=2026.09.17.1" alt="QR Code Pix para presentear o casal" width="280" height="280" loading="eager" decoding="async">
+          </div>
+        </div>
+
+        <div class="pix-details">
+          <p class="pix-label">Pix copia e cola</p>
+          <code id="pix-code" class="pix-code" tabindex="0">00020126580014br.gov.bcb.pix0136285268b6-6f0e-462a-bbdc-25a0e32daf8b5204000053039865802BR5901N6001C62070503***63046883</code>
+          <button id="copy-pix" class="button button--primary pix-copy-button" type="button" aria-label="Copiar chave Pix">Copiar chave Pix</button>
+          <p id="pix-copy-feedback" class="pix-copy-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+        </div>
+      </div>
+    </section>
+
     <section class="presentes-section" id="lista-presentes" aria-labelledby="presentes-title">
-      <img class="decor decor--branch" src="./assets/decor/branch.svg?v=2026.09.16.1" alt="" aria-hidden="true">
-      <img class="decor decor--ribbon" src="./assets/decor/ribbon.svg?v=2026.09.16.1" alt="" aria-hidden="true">
+      <img class="decor decor--branch" src="./assets/decor/branch.svg?v=2026.09.17.1" alt="" aria-hidden="true">
+      <img class="decor decor--ribbon" src="./assets/decor/ribbon.svg?v=2026.09.17.1" alt="" aria-hidden="true">
       <aside class="paper-note paper-note--gifts" aria-hidden="true">Aqui também<br>mora muito amor ♡</aside>
       <div class="section-heading">
         <span class="section-kicker">com carinho, para o novo começo</span>
@@ -79,6 +104,6 @@
   </dialog>
 
   <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
-  <script type="module" src="./js/app.js?v=2026.09.16.1"></script>
+  <script type="module" src="./js/app.js?v=2026.09.17.1"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 import { collection, doc, onSnapshot, runTransaction, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
-import { db } from "./firebase-config.js?v=2026.09.16.1";
+import { db } from "./firebase-config.js?v=2026.09.17.1";
 
 export function acompanharReservas(onNext, onError) {
   return onSnapshot(collection(db, "reservas"), onNext, onError);

@@ -1,6 +1,6 @@
-import { presentes } from "./presentes.js?v=2026.09.16.1";
-import { acompanharReservas, reservarPresente } from "./firebase-service.js?v=2026.09.16.1";
-import { closeReservationDialog, elements, openReservationDialog, renderPresentes, showToast } from "./ui.js?v=2026.09.16.1";
+import { presentes } from "./presentes.js?v=2026.09.17.1";
+import { acompanharReservas, reservarPresente } from "./firebase-service.js?v=2026.09.17.1";
+import { closeReservationDialog, elements, openReservationDialog, renderPresentes, showToast } from "./ui.js?v=2026.09.17.1";
 
 const reservas = new Map();
 const state = { reservas, isLoadingReservations: true, hasConnectionError: false, isSubmitting: false };
@@ -111,4 +111,44 @@ function registerWebMcpTool() {
 
 refreshCards();
 registerWebMcpTool();
+
+const pixCode = document.querySelector("#pix-code");
+const copyPixButton = document.querySelector("#copy-pix");
+const pixCopyFeedback = document.querySelector("#pix-copy-feedback");
+let pixFeedbackTimer = null;
+
+async function copyPixKey() {
+  const pixKey = pixCode?.textContent?.trim();
+  if (!pixKey || !copyPixButton || !pixCopyFeedback) return;
+  window.clearTimeout(pixFeedbackTimer);
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(pixKey);
+    } else {
+      const fallbackInput = document.createElement("textarea");
+      fallbackInput.value = pixKey;
+      fallbackInput.setAttribute("readonly", "");
+      fallbackInput.style.position = "fixed";
+      fallbackInput.style.top = "-9999px";
+      fallbackInput.style.opacity = "0";
+      document.body.append(fallbackInput);
+      fallbackInput.focus();
+      fallbackInput.select();
+      fallbackInput.setSelectionRange(0, fallbackInput.value.length);
+      const copied = document.execCommand("copy");
+      fallbackInput.remove();
+      if (!copied) throw new Error("Clipboard indisponível");
+    }
+    pixCopyFeedback.removeAttribute("data-error");
+    pixCopyFeedback.textContent = "Copiado com sucesso 💙";
+    pixFeedbackTimer = window.setTimeout(() => {
+      pixCopyFeedback.textContent = "";
+    }, 2800);
+  } catch {
+    pixCopyFeedback.dataset.error = "true";
+    pixCopyFeedback.textContent = "Não foi possível copiar. Selecione o código e copie manualmente.";
+  }
+}
+
+copyPixButton?.addEventListener("click", copyPixKey);
 export { estaReservado };

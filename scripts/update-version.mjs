@@ -20,7 +20,7 @@ const versionedFiles = [
   "js/ui.js",
   "dist/js/ui.js",
 ];
-const localVersionedUrl = /(\.{1,2}\/[^"'`\s?]+\.(?:css|js|webp|svg))\?v=[^"'`\s&]+/g;
+const localVersionedUrl = /(\.{1,2}\/[^"'`\s?]+\.(?:css|js|webp|svg|png))\?v=[^"'`\s&]+/g;
 
 for (const relativePath of versionFiles) {
   fs.writeFileSync(

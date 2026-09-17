@@ -14,6 +14,10 @@
   .paper-note--left { top: 2rem; left: -2rem; }
   .paper-note--right { top: 36%; right: -2rem; }
   .paper-note--bottom { display: none; }
+  .pix-card { grid-template-columns: 1fr; gap: 2.2rem; max-width: 38rem; }
+  .pix-details { text-align: center; }
+  .pix-copy-button { margin-right: auto; margin-left: auto; }
+  .pix-code { text-align: left; }
   .presentes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .decor--branch { width: 11rem; opacity: .48; }
 }
@@ -25,6 +29,13 @@
   .paper-note { display: none; }
   .heart-sketch--photo { width: 3.4rem; right: -.6rem; }
   .presentes-section { padding: 4.7rem 1rem 5rem; }
+  .pix-section { padding: 4.7rem 1rem 5.5rem; }
+  .pix-card { gap: 1.7rem; padding: 1.1rem; border-radius: 1.6rem; }
+  .pix-qr-frame { width: min(72vw, 16rem); }
+  .pix-heading { margin-bottom: 2.4rem; }
+  .pix-heading h2 { max-width: 22rem; margin-right: auto; margin-left: auto; font-size: clamp(2rem, 8.8vw, 3.1rem); line-height: 1.08; overflow-wrap: break-word; }
+  .pix-heading p { max-width: 21rem; margin-right: auto; margin-left: auto; }
+  .pix-copy-button { width: 100%; }
   .section-heading { margin-bottom: 3rem; }
   .presentes-grid { grid-template-columns: 1fr; max-width: 21rem; gap: 1.4rem; }
   .presente-card { min-height: 25rem; }
