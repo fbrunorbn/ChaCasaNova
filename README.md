@@ -6,7 +6,7 @@ Convite digital e lista de presentes do Chá de Casa Nova de J & Y. O projeto é
 
 - `index.html`: estrutura da página, hero, lista, modal e região de mensagens.
 - `css/`: reset, variáveis visuais, estilos principais e ajustes responsivos.
-- `js/presentes.js`: os 36 presentes, caminhos de imagens e links de exemplo.
+- `js/presentes.js`: os 53 presentes, caminhos de imagens e links de exemplo.
 - `js/firebase-config.js`: inicialização do Firebase Web SDK.
 - `js/firebase-service.js`: escuta em tempo real e transação de reserva.
 - `js/ui.js`: renderização dos cards, modal e toasts.
@@ -37,7 +37,7 @@ Todos os caminhos públicos são relativos (`./assets`, `./css` e `./js`), entã
 
 ## Trocar imagens e links
 
-As 36 imagens otimizadas dos presentes estão em formato WebP com fundo transparente em `assets/presentes/`. Para substituir uma delas, mantenha exatamente o nome declarado em `js/presentes.js`, por exemplo `liquidificador.webp`. Enquanto o arquivo não existir, o site mostra `placeholder.svg`; nenhuma alteração de código é necessária.
+As 53 imagens otimizadas dos presentes estão em formato WebP, com fundo transparente ou claro conforme o produto, em `assets/presentes/`. Para substituir uma delas, mantenha exatamente o nome declarado em `js/presentes.js`, por exemplo `liquidificador.webp`. Enquanto o arquivo não existir, o site mostra `placeholder.svg`; nenhuma alteração de código é necessária.
 
 Para trocar um link ou editar a lista, altere somente `js/presentes.js`. Use `exemploUrl: null` quando ainda não houver sugestão; o botão aparecerá como **Em breve**.
 
@@ -67,7 +67,7 @@ Nunca versione `serviceAccount.json`, chaves privadas, `client_secret`, credenci
 ## Verificação antes de publicar
 
 - Teste em desktop e celular.
-- Confirme que os 36 cards aparecem e que imagens ausentes usam o placeholder.
+- Confirme que os 53 cards aparecem e que imagens ausentes usam o placeholder.
 - Confirme que **Exemplo** abre uma nova guia e que itens sem link mostram **Em breve**.
 - Verifique modal, validação do nome, reserva, atualização entre duas abas e o estado após recarregar.
 - Para o teste de concorrência, abra duas abas no mesmo item e confirme quase ao mesmo tempo; apenas uma transação deve vencer.
